@@ -1,12 +1,16 @@
-Step1:
+# Step 1:
 
+### Installing the LangChain - v1-alpha
+```python
 pip install --pre -U langchain
-
-Step2:
-
-# Installing the OpenAI integration
+```
+### Installing the OpenAI integration
+```python
 pip install -U langchain-openai
-# Installing the Anthropic integration
+```
+### Installing the Anthropic integration
+```python
 pip install -U langchain-anthropic
+```
 
 
