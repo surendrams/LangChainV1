@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File (LangChain)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}", // Debugs the currently open Python file
+            "console": "integratedTerminal", // Shows output in VS Code's integrated terminal
+            "justMyCode": true, // Skips stepping into library code by default
+            "envFile": "${workspaceFolder}/.env", // IMPORTANT: Loads environment variables from a .env file
+            "cwd": "${workspaceFolder}", // Sets the current working directory to the project root
+            "purpose": ["debug-test"] // Useful for distinguishing debug configurations
+        },
+        {
+            "name": "Python: Main LangChain App",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/main.py", // Adjust this path to your main entry point (e.g., app.py, run.py)
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}",
+            "purpose": ["debug-test"]
+        },
+        {
+            "name": "Python: LangChain with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/cli_app.py", // Example for a script that takes arguments
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "envFile": "${workspaceFolder}/.env",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--model", "gpt-4",
+                "--temperature", "0.7"
+            ], // Example arguments to pass to your script
+            "purpose": ["debug-test"]
+        }
+    ]
+}

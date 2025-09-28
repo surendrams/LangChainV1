@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Clean /tmp (Linux/macOS)",
+            "type": "shell",
+            "command": "rm -rf /tmp/*",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "clear": true
+            },
+            "problemMatcher": [],
+            "windows": {
+                "command": "echo This task is for Linux/macOS. Use 'Clean /tmp (Windows)' instead."
+            }
+        }
+    ]
+}
